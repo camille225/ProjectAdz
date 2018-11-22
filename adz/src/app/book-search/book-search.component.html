@@ -1,9 +1,18 @@
-<p>
-book-search works!
-</p>
-<mat-grid-list cols="2" rowHeight="2:1">
-  <mat-grid-tile>1</mat-grid-tile>
-  <mat-grid-tile>2</mat-grid-tile>
-  <mat-grid-tile>3</mat-grid-tile>
-  <mat-grid-tile>4</mat-grid-tile>
-</mat-grid-list>
+<!--div >
+
+    <label for="name"> Nom du livre</label>
+    <input type="text" id='name'[(ngModel)]='name' name="name" #name='ngModel'>
+
+</div-->
+
+
+
+<div  class = "example-container" >
+  <mat-form-field >
+    <input  matInput  placeholder = "Rechercher un livre" >
+  </mat-form-field >
+  <button mat-button (ngSubmit)="searchBook()">
+      <mat-icon>search</mat-icon>
+  </button>
+
+</div >

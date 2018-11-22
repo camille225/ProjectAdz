@@ -1,0 +1,14 @@
+mat-toolbar{
+  background-color: rgb(39, 39, 170);
+}
+
+.test {
+  position: left;
+}
+.test1 {
+  position: center;
+}
+.test2 {
+  position: right;
+}
+
