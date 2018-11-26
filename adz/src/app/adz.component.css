@@ -7,6 +7,7 @@ mat-toolbar{
 }
 .test1 {
   position: center;
+  margin-left: 48%;
 }
 .test2 {
   position: right;

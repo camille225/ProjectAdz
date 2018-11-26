@@ -1,17 +1,13 @@
-<!--div >
-
-    <label for="name"> Nom du livre</label>
-    <input type="text" id='name'[(ngModel)]='name' name="name" #name='ngModel'>
-
-</div-->
-
-
-
+<div style="text-align:center">
+    <h1>
+      Bienvenue à Bibliotheque Adz!
+    </h1>
+</div>
 <div  class = "example-container" >
   <mat-form-field >
-    <input  matInput  placeholder = "Rechercher un livre" >
+    <input type="text" id='name' [(ngModel)]="name" matInput  placeholder = "Rechercher un livre" >
   </mat-form-field >
-  <button mat-button (ngSubmit)="searchBook()">
+  <button mat-button (click)="searchBook(name)">
       <mat-icon>search</mat-icon>
   </button>
 

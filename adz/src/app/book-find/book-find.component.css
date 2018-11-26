@@ -1,0 +1,29 @@
+mat-grid-tile {
+  background: lightblue;
+}
+
+button{
+  background: rgb(222, 229, 231);
+    width: 100%;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: line;
+  position: center;
+}
+
+.example-container > * {
+  width: 25%;
+  margin-left: 15%;
+}
+
+.element{
+  display: flex;
+  text-align: left;
+  font-size: 8px;
+  width: 10%;
+}
+.example-card{
+  width: 10%;
+}
