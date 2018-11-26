@@ -13,6 +13,7 @@ export class AllBooksService {
 
   constructor(private http: HttpClient) { }
   books: Books[];
+  book: any;
   private booksUrl = 'https://www.googleapis.com/books/v1/volumes?q=';
 
   private log(log: string) {
@@ -36,6 +37,17 @@ export class AllBooksService {
     return this.http.get<Books[]>(url).pipe(
       tap(_ => this.log(`fetched books`)),
       catchError(this.handleError('getBooksPa', []))
+    );
+  }
+  getBook(name: any): Observable<any> {
+    if (!name.trim()) {
+      return of([]);
+    }
+    const url = `${this.name.selfLink}`;
+    console.log(url);
+    return this.http.get<any>(url).pipe(
+      tap(_ => this.log(`fetched books`)),
+      catchError(this.handleError('getBook', []))
     );
   }
   searchBooks(term: string, books): Observable<Books[]> {

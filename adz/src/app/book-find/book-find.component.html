@@ -21,10 +21,10 @@
 <mat-grid-list cols="2" rowHeight="2:1">
   <button mat-raised-button >
     <mat-grid-tile cols="2" rowHeight="2:1" *ngFor="let book of books" (click)="selectBook(book)">
-        <img mat-card-image id="image" [src]="book.volumeInfo.imageLinks.thumbnail" alt="">
+        <img mat-card-image id="image" *ngIf="book.volumeInfo.imageLinks.thumbnail"  [src]="book.volumeInfo.imageLinks.thumbnail" alt="">
         <mat-list role="list">
             <h1>{{book.id}}</h1>
-            <mat-list-item id='element'role="lisitem">Id Livre:{{book.volumeInfo.title}}</mat-list-item>
+            <mat-list-item id='element'role="lisitem">Id Livre:{{book.id}}</mat-list-item>
             <mat-list-item id='element'role="lisitem">Auteur du livre:{{book.volumeInfo.authors}}</mat-list-item>
             <mat-list-item id='element'role="lisitem">pageCount: {{book.volumeInfo.pageCount}}</mat-list-item>
         </mat-list>

@@ -18,10 +18,10 @@ export class BookSearchComponent implements OnInit {
   ngOnInit() {
   }
 
-  getBooksPa(achercher: string): void {
+  /*getBooksPa(achercher: string): void {
     this.allbooks.getBooksPa(achercher)
     .subscribe( books => this.books = books.items);
-  }
+  }*/
 
   searchBook(achercher: string): void {
     console.log(achercher);

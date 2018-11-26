@@ -172,6 +172,7 @@ export class BookFindComponent implements OnInit {
 // information sur le book en popup
   selectBook(book): void {
     this.bottomSheet.open(DetailBookComponent);
+    this.allbooks.book = book ;
   }
 
   goBack(): void {
